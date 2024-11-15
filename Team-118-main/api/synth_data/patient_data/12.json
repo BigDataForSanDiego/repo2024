@@ -1,0 +1,40 @@
+{
+    "name": "John Carter",
+    "age": 72,
+    "location": {
+        "address": "202 Cardio Ave",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "85001"
+    },
+    "gender": "Male",
+    "race": "African American",
+    "veteranstatus": true,
+    "disabilitystatus": false,
+    "condition": [
+        "Heart failure",
+        "Atrial fibrillation"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 180 lbs",
+        "Blood pressure: 145/90 mmHg",
+        "Oxygen saturation: 95%"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Pacemaker insertion"
+    ],
+    "medicationrequest": [
+        "Warfarin",
+        "Beta-blocker"
+    ],
+    "goal": "To manage atrial fibrillation and improve quality of life."
+}

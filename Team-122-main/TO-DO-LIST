@@ -1,0 +1,14 @@
+1. Investigate classification data for physicians in managedcareplans like 'Partnership Health Plan of CA', ' MOLINA HEALTHCARE OF CALIFORNIA PARTNER PLAN', 'California Health and Wellness Plan'.
+Create folium plots for SOME classifications of physicians under the managedcareplan
+2. Organize Google Sites (For sites under ManagedCarePlans, for Molina add:'Anesthesiology','Podiatrist',''Neurological Surgery','Urology',
+'Obstetrics & Gynecology','Physical Therapist',''Anesthesiology',''Radiology','Nurse Anesthetist','Behavior Analyst'
+For BLUE SHIELD add 'Anesthesiology','Orthopaedic Surgery','Urology','Neurological Surgery','Otolaryngology','Radiology','Obstetrics & Gynecology'
+'
+FOR SAN DIEGO PHYSICIANS UNDER MOLINA ADD 'Pathology', 'Acupuncturist','Dietitian','Transplant Surgery'
+FOR SAN DIEGO PHYSICIANS UNDER MOLINA THAT OFFER TELEHEALTH ADD 'Pathology','Clinical Neuropsychologist','Transplant Surgery'
+
+FOR SAN DIEGO PHYSICIANS UNDER BLUE SHIELD ADD 'Acupuncturist','Pathology','Dietitian','Colon and Rectal Surgery'
+FOR SAN DIEGO PHYSICIANS UNDER BLUE SHIELD THAT OFFER TELEHEALTH ADD 'Hearing Aid Fitter','Acupuncturist','Speech-Language Pathologist'
+3. Create calendar function (if possible)
+4. Create Heatmaps for certain diseases/illnesses
+5. Create Google Slides

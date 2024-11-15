@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediToken Interface Back</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 700px;
+            height: 700px;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        /* Search Bar at the Top */
+        .search-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 30px;
+            padding: 8px;
+            font-size: 16px;
+            width: 96%;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+        }
+
+        .search-box img {
+            width: 20px;
+        }
+
+        /* Scrollable Info Section */
+        .info-sections {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid black;
+            padding: 15px;
+            border-radius: 10px;
+            max-height: 500px;
+        }
+
+        .info-section {
+            margin-bottom: 20px;
+        }
+
+        .info-section label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .info-section input,
+        .info-section textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 14px;
+            pointer-events: none; /* Initially non-editable */
+        }
+
+        .info-section textarea {
+            resize: none;
+        }
+
+        .info-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-section ul li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        /* Add/Remove buttons */
+        .add-button {
+            color: green;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 20px;
+        }
+
+        .remove-button {
+            color: red;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        /* Edit Button */
+        .edit-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 30px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .edit-button.submit {
+            background-color: green;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Search Box -->
+    <div class="search-box">
+        <input type="text" id="search-field" placeholder="Search for patient info...">
+        <img src="search.png" alt="Search Icon">
+    </div>
+
+    <!-- Scrollable Info Sections -->
+    <div class="info-sections" id="info-sections">
+        <div class="info-section" data-label="Gender">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" value="Male">
+        </div>
+        <div class="info-section" data-label="Sex">
+            <label for="sex">Sex</label>
+            <input type="text" id="sex" value="Male">
+        </div>
+        <div class="info-section" data-label="Age">
+            <label for="age">Age</label>
+            <input type="text" id="age" value="35">
+        </div>
+        <div class="info-section" data-label="Height">
+            <label for="height">Height (ft,in)</label>
+            <input type="text" id="height" value="6 ft">
+        </div>
+        <div class="info-section" data-label="Weight">
+            <label for="weight">Weight (lbs)</label>
+            <input type="text" id="weight" value="180 lbs">
+        </div>
+        <div class="info-section" data-label="Blood Type">
+            <label for="blood-type">Blood Type</label>
+            <input type="text" id="blood-type" value="O+">
+        </div>
+        <div class="info-section" data-label="BMI">
+            <label for="bmi">BMI</label>
+            <input type="text" id="bmi" value="22.5">
+        </div>
+
+        <!-- Editable lists with add/remove functionality -->
+        <div class="info-section" data-label="Prescriptions">
+            <label>Prescriptions <span class="add-button" id="add-prescription">+</span></label>
+            <ul id="prescriptions-list">
+                <li><input type="text" value="Prescription 1"><span class="remove-button">-</span></li>
+                <li><input type="text" value="Prescription 2"><span class="remove-button">-</span></li>
+            </ul>
+        </div>
+
+        <div class="info-section" data-label="Special Conditions">
+            <label>Special Conditions <span class="add-button" id="add-condition">+</span></label>
+            <ul id="conditions-list">
+                <li><input type="text" value="Condition 1"><span class="remove-button">-</span></li>
+                <li><input type="text" value="Condition 2"><span class="remove-button">-</span></li>
+            </ul>
+        </div>
+
+        <div class="info-section" data-label="Visit Logs">
+            <label>Visit Logs <span class="add-button" id="add-visit">+</span></label>
+            <ul id="visit-logs-list">
+                <li><input type="text" value="Visit 4"><span class="remove-button">-</span></li>
+                <li><input type="text" value="Visit 3"><span class="remove-button">-</span></li>
+            </ul>
+        </div>
+
+        <div class="info-section" data-label="Patient History">
+            <label>Patient History <span class="add-button" id="add-history">+</span></label>
+            <ul id="history-list">
+                <li><input type="text" value="History 1"><span class="remove-button">-</span></li>
+                <li><input type="text" value="History 2"><span class="remove-button">-</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Edit Button -->
+    <div class="edit-button" id="edit-btn">Edit</div>
+</div>
+
+<script>
+    const editButton = document.getElementById('edit-btn');
+    const fields = document.querySelectorAll('.info-section input');
+    const searchField = document.getElementById('search-field');
+    const infoSections = document.querySelectorAll('.info-section');
+    let isEditing = false;
+
+    // Enable or disable fields on edit/submit
+    editButton.addEventListener('click', function() {
+        if (!isEditing) {
+            fields.forEach(field => field.style.pointerEvents = 'auto');
+            editButton.textContent = 'Submit';
+            editButton.classList.add('submit');
+            isEditing = true;
+        } else {
+            fields.forEach(field => field.style.pointerEvents = 'none');
+            editButton.textContent = 'Edit';
+            editButton.classList.remove('submit');
+            isEditing = false;
+        }
+    });
+
+    // Filter the sections based on search term
+    searchField.addEventListener('input', function() {
+        const searchTerm = searchField.value.toLowerCase();
+        infoSections.forEach(section => {
+            const label = section.getAttribute('data-label').toLowerCase();
+            if (label.includes(searchTerm)) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+    });
+
+    // Add/Remove functionality for lists
+    function addListItem(listId) {
+        const list = document.getElementById(listId);
+        const newItem = document.createElement('li');
+        newItem.innerHTML = `<input type="text" value=""><span class="remove-button">-</span>`;
+        list.appendChild(newItem);
+    }
+
+    function removeListItem(event) {
+        if (event.target.classList.contains('remove-button')) {
+            const listItem = event.target.parentElement;
+            listItem.remove();
+        }
+    }
+
+    // Add item event listeners
+    document.getElementById('add-prescription').addEventListener('click', function() {
+        addListItem('prescriptions-list');
+    });
+
+    document.getElementById('add-condition').addEventListener('click', function() {
+        addListItem('conditions-list');
+    });
+
+    document.getElementById('add-visit').addEventListener('click', function() {
+        addListItem('visit-logs-list');
+    });
+
+    document.getElementById('add-history').addEventListener('click', function() {
+        addListItem('history-list');
+    });
+
+    // Remove item event listeners
+    document.getElementById('info-sections').addEventListener('click', removeListItem);
+</script>
+
+</body>
+</html>

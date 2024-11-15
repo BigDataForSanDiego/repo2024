@@ -1,0 +1,40 @@
+{
+    "name": "Robert Martinez",
+    "age": 54,
+    "location": {
+        "address": "987 Cedar St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+    },
+    "gender": "Male",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Chronic pain",
+        "Osteoarthritis"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "Tetanus": "2024"
+        }
+    },
+    "observation": [
+        "Pain level: 6/10",
+        "Mobility: Limited",
+        "Weight: 210 lbs"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Physical therapy"
+    ],
+    "medicationrequest": [
+        "Pain reliever",
+        "Anti-inflammatory medication"
+    ],
+    "goal": "To manage pain and improve mobility."
+}

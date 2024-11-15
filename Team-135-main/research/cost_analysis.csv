@@ -1,0 +1,7 @@
+type,"range",estimated annual cost
+Vehicle Purchase,"20,000-50,000","30,000"
+Maintenance,"1,000-1,500","1,250"
+Fuel,"500-1000 per month","9,000 (750 a month)"
+Insurance,"2,000-5,000","3,500"
+Driver Salary,"30,000-40,000","35,000"
+Google Maps API,"20-40 for 2,000-4,000 single vehicle routing",40

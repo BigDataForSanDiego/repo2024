@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Search</title>
+</head>
+<body>
+    <!-- Header bar for website with buttons to direct user to the correct page -->
+    <<main>
+        <div id="menu_bar">
+            <a href="/">
+                <button type="button" class="home-button">
+                    <img src="/static/images/logo.png" alt="Home Logo" class="home-logo">
+                </button>
+            </a>
+            <a href="/resources">
+                <button type="button">Resources</button>
+            </a>
+            <a href="/rewards">
+               <button type="button">Rewards</button>
+            </a>
+            <a href="/help">
+               <button type="button" class="help">?</button>
+            </a>
+        </div>
+    </main>
+
+    <!-- Centered heading -->
+    <h1>Outdoor Activities Near You</h1>
+
+    <!-- Search bar container -->
+    <div class="search-container">
+        <form action="/search" method="POST">
+            <input type="text" class="search-input" name="query" placeholder="Enter a Zip Code" required>
+            <button type="submit" class="search-button">Go!</button>
+        </form>
+    
+        <!-- Display the "Activities near" text next to the search bar -->
+        {% if results %}
+            <h3><span class="results-text">Activities near {{ query }}</span></h3>
+        {% endif %}
+    </div>
+
+    <!-- Grid container for search results -->
+    <div class="grid-container">
+        <!-- Bike Routes Results -->
+        <div class="result-column">
+            <h3>Bike Routes</h3>
+            {% if results['dataset1'] is not none %}
+                {% for index in results['dataset1'].index %}
+                    <div class="result-box">
+                        <p><strong>Entry Street:</strong> {{ results['dataset1'].at[index, column_mapping['dataset1'][0]] }}</p>
+                        <p><strong>Exit Street:</strong> {{ results['dataset1'].at[index, column_mapping['dataset1'][1]] }}</p>
+                        <p><strong>Zip Code:</strong> {{ results['dataset1'].at[index, column_mapping['dataset1'][2]] }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No results found</p>
+            {% endif %}
+        </div>
+
+        <!-- Parks Results -->
+        <div class="result-column">
+            <h3>Parks</h3>
+            {% if results['dataset2'] is not none %}
+                {% for index in results['dataset2'].index %}
+                    <div class="result-box">
+                        <p><strong>Park:</strong> {{ results['dataset2'].at[index, column_mapping['dataset2'][0]] }}</p>
+                        <p><strong>Location:</strong> {{ results['dataset2'].at[index, column_mapping['dataset2'][1]] }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No results found</p>
+            {% endif %}
+        </div>
+
+        <!-- Recreation Centers Results -->
+        <div class="result-column">
+            <h3>Recreation Centers</h3>
+            {% if results['dataset3'] is not none %}
+                {% for index in results['dataset3'].index %}
+                    <div class="result-box">
+                        <p><strong>Center:</strong> {{ results['dataset3'].at[index, column_mapping['dataset3'][0]] }}</p>
+                        <p><strong>Address:</strong> {{ results['dataset3'].at[index, column_mapping['dataset3'][1]] }}, {{ results['dataset3'].at[index, column_mapping['dataset3'][2]] }}</p>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No results found</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

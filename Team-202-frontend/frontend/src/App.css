@@ -1,0 +1,5 @@
+body {
+    background-image: url('assets/shiny.svg');
+    background-size: cover;
+    background-repeat: repeat-y;
+}

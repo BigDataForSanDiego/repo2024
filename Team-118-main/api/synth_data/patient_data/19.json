@@ -1,0 +1,40 @@
+{
+    "name": "Lucas Thompson",
+    "age": 42,
+    "location": {
+        "address": "159 Brainwave St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92093"
+    },
+    "gender": "Male",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": true,
+    "condition": [
+        "Fahr's disease",
+        "Dementia"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Mood: Occasionally confused",
+        "Memory: Short-term memory loss",
+        "Motor skills: Slightly impaired"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Neuropsychological evaluation"
+    ],
+    "medicationrequest": [
+        "Cholinesterase inhibitor",
+        "Antidepressant medication"
+    ],
+    "goal": "To manage symptoms of dementia and improve cognitive function."
+}

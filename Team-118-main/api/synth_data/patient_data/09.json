@@ -1,0 +1,38 @@
+{
+    "name": "Lisa White",
+    "age": 50,
+    "location": {
+        "address": "456 Maple Dr",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92101"
+    },
+    "gender": "Female",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Mild depression"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 160 lbs",
+        "Mood: Stable but low energy",
+        "Energy levels: Low"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Mental health support program"
+    ],
+    "medicationrequest": [
+        "Antidepressant medication"
+    ],
+    "goal": "To improve mood and increase energy levels."
+}

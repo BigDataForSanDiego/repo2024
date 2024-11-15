@@ -1,0 +1,40 @@
+{
+    "name": "Michael Johnson",
+    "age": 45,
+    "location": {
+        "address": "789 Pine St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75201"
+    },
+    "gender": "Male",
+    "race": "African American",
+    "veteranstatus": true,
+    "disabilitystatus": false,
+    "condition": [
+        "Type 2 diabetes",
+        "Hypertension"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "Hepatitis B": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 195 lbs",
+        "Blood pressure: 140/90 mmHg",
+        "Blood sugar: 150 mg/dL"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Diabetes management program"
+    ],
+    "medicationrequest": [
+        "Metformin",
+        "Lisinopril"
+    ],
+    "goal": "To control blood sugar levels and manage blood pressure."
+}

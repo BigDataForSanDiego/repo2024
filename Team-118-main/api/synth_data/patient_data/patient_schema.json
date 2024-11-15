@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "default": "Unknown"
+        },
+        "age": {
+            "type": "integer",
+            "default": "0"
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "default": ""
+                },
+                "state": {
+                    "type": "string",
+                    "default": ""
+                },
+                "zip": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "gender": {
+            "type": "string",
+            "default": "Unknown"
+        },
+        "race": {
+            "type": "string",
+            "default": "Unknown"
+        },
+        "veteranstatus": {
+            "type": "boolean",
+            "default": false
+        },
+        "disabilitystatus": {
+            "type": "boolean",
+            "default": false
+        },
+        "condition": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "immunization": {
+            "type": "object",
+            "properties": {
+                "vaccines": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "observation": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "allergyintolerance": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "procedure": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "medicationrequest": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "goal": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "age",
+        "location",
+        "gender",
+        "race"
+    ]
+}

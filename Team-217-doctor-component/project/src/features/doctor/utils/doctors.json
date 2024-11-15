@@ -1,0 +1,114 @@
+{
+  "results": [
+    {
+      "name": "Jonathan Koelle, MD",
+      "specialty": "Psychiatry",
+      "distance": "2.8 miles",
+      "location": "La Mesa",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    },
+    {
+      "name": "Karim Ghobrial-Sedky, MD",
+      "specialty": [
+        "Addiction psychiatry",
+        "Child and adolescent psychiatry",
+        "Psychiatry",
+        "Sleep medicine"
+      ],
+      "distance": "4.2 miles",
+      "location": "San Diego",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person"]
+    },
+    {
+      "name": "Ci Ma, MD",
+      "specialty": "Psychiatry",
+      "distance": "5.4 miles",
+      "location": "San Diego",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    },
+    {
+      "name": "Smit Chauhan, MD, MPH",
+      "specialty": [
+        "Child and adolescent psychiatry",
+        "Geriatric psychiatry",
+        "Neurology",
+        "Psychiatry",
+        "Sleep medicine"
+      ],
+      "accepting_new_patients": false,
+      "appointments_available": true,
+      "visit_options": []
+    },
+    {
+      "name": "Noreen Newmark, MD",
+      "specialty": "Psychiatry",
+      "distance": "9.2 miles",
+      "location": "Chula Vista",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    },
+    {
+      "name": "Zvjezdan Nuhic, MD",
+      "specialty": "Psychiatry",
+      "distance": "9.2 miles",
+      "location": "Chula Vista",
+      "accepting_new_patients": false,
+      "appointments_available": true,
+      "visit_options": ["In-person"]
+    },
+    {
+      "name": "John Otis, MD",
+      "specialty": "Psychiatry",
+      "distance": "9.4 miles",
+      "location": "El Cajon",
+      "accepting_new_patients": false,
+      "appointments_available": true,
+      "visit_options": ["In-person"]
+    },
+    {
+      "name": "Sanjoy Sathpathy, MD",
+      "specialty": ["Child and adolescent psychiatry", "Psychiatry"],
+      "distance": "9.8 miles",
+      "location": "San Diego",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    },
+    {
+      "name": "Trenton Moyer, MD",
+      "specialty": ["Addiction psychiatry", "Psychiatry"],
+      "distance": "12.0 miles",
+      "location": "La Jolla",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    },
+    {
+      "name": "Anna Carrillo, MD",
+      "specialty": "Psychiatry",
+      "accepting_new_patients": false,
+      "appointments_available": false,
+      "visit_options": []
+    },
+    {
+      "name": "Alan Berkowitz, MD",
+      "specialty": [
+        "Addiction psychiatry",
+        "Geriatric psychiatry",
+        "Psychiatry"
+      ],
+      "distance": "23.3 miles",
+      "location": "Encinitas",
+      "accepting_new_patients": true,
+      "appointments_available": true,
+      "visit_options": ["In-person", "Virtual"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+Patient Name: John Doe
+Age: 34
+Date of Last Appointment: September 10, 2024
+
+Medical History:
+- John has a history of generalized anxiety disorder (GAD) diagnosed in 2020.
+- He reports occasional panic attacks, typically triggered by high-stress situations at work.
+- Sleep disturbances (insomnia) have been present over the last 6 months, with difficulty falling asleep and waking up during the night.
+- Current medication: Sertraline (50 mg daily), which John has been taking for the past two years.
+
+Current Concerns:
+- John mentioned feeling an increased sense of hopelessness and low energy in the last few weeks.
+- He has experienced difficulty concentrating at work and feels overwhelmed by small tasks.
+- Recently, John has been isolating himself socially, avoiding friends and family gatherings.
+- Reports feeling "disconnected" from activities he used to enjoy, such as exercising and reading.
+
+Therapy Progress:
+- John started Cognitive Behavioral Therapy (CBT) in April 2023 and has been attending weekly sessions.
+- He has been practicing mindfulness techniques but reports inconsistent usage, particularly when stress levels are high.
+- In the last session, the therapist discussed new coping strategies for managing acute stress but noted John's hesitancy in implementing them.
+
+Goals for Therapy:
+- Improve consistency with mindfulness and other stress-reduction techniques.
+- Address feelings of isolation and lack of motivation.
+- Explore potential changes in medication with his psychiatrist if symptoms persist.

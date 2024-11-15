@@ -1,0 +1,40 @@
+{
+    "name": "Maria Gonzalez",
+    "age": 50,
+    "location": {
+        "address": "303 Wellness Blvd",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+    },
+    "gender": "Female",
+    "race": "Hispanic",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Hypertension",
+        "Diabetes"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 160 lbs",
+        "Blood pressure: 130/80 mmHg",
+        "Blood sugar: 130 mg/dL"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Lifestyle modification program"
+    ],
+    "medicationrequest": [
+        "Metformin",
+        "Lisinopril"
+    ],
+    "goal": "To lower blood pressure and blood sugar levels through diet and exercise."
+}

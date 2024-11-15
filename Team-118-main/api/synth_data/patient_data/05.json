@@ -1,0 +1,37 @@
+{
+    "name": "Jessica Brown",
+    "age": 37,
+    "location": {
+        "address": "234 Cedar Blvd",
+        "city": "Boston",
+        "state": "MA",
+        "zip": "02108"
+    },
+    "gender": "Female",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Chronic fatigue syndrome"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 145 lbs",
+        "Energy levels: Very low"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Fatigue management program"
+    ],
+    "medicationrequest": [
+        "None at this time"
+    ],
+    "goal": "To improve energy levels and overall quality of life."
+}

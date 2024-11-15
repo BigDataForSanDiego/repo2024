@@ -1,0 +1,126 @@
+/* assets/styles.css */
+
+[data-bs-theme="dark"] body {
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-bs-theme="light"] body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: #1f1f1f !important;
+}
+
+[data-bs-theme="light"] .navbar {
+    background-color: #f8f9fa !important;
+}
+
+.navbar-brand {
+    color: inherit; 
+    font-weight: bold;
+    font-size: 2rem; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+[data-bs-theme="dark"] .container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+[data-bs-theme="light"] .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+}
+[data-bs-theme="dark"] .dash-loading {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+[data-bs-theme="light"] .dash-loading {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+.dccDropdown {
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 215px;
+}
+
+
+.dccDropdown .Select-menu-outer {
+    background-color: #9c9292;
+}
+
+
+.dccDropdown .Select-control {
+    background-color: #a8a2a2;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+
+
+
+.graph-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.graph-item {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+
+.centered-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .graph-item {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}

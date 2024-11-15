@@ -1,0 +1,38 @@
+{
+    "name": "Emily Davis",
+    "age": 27,
+    "location": {
+        "address": "123 Maple Ave",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33101"
+    },
+    "gender": "Female",
+    "race": "Hispanic",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Anxiety",
+        "Depression"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Mood: Stable but low energy",
+        "Energy levels: Low"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Cognitive behavioral therapy"
+    ],
+    "medicationrequest": [
+        "Antidepressant medication"
+    ],
+    "goal": "To improve mood and increase energy levels."
+}

@@ -1,0 +1,152 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "default": "Unknown"
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "default": ""
+                },
+                "state": {
+                    "type": "string",
+                    "default": ""
+                },
+                "zip": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
+        "qualifications": {
+            "type": "object",
+            "properties": {
+                "ageRange": {
+                    "type": "object",
+                    "properties": {
+                        "minAge": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Minimum age required for the trial"
+                        },
+                        "maxAge": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "description": "Maximum age required for the trial"
+                        }
+                    }
+                },
+                "gender": {
+                    "type": "string",
+                    "default": "Unknown"
+                },
+                "race": {
+                    "type": "string",
+                    "default": "Unknown"
+                },
+                "veteran_status": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "disability_status": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "past_conditions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "immunization": {
+                    "type": "string"
+                },
+                "observation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "allergies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "procedure": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "disqualifications": {
+        "type": "object",
+        "properties": {
+            "ageRange": {
+                "type": "object",
+                "properties": {
+                    "minAge": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "description": "Minimum age disqualified for the trial"
+                    },
+                    "maxAge": {
+                        "type": "integer",
+                        "minimum": 0,
+                        "description": "Maximum age disqualified for the trial"
+                    }
+                }
+            },
+            "gender": {
+                "type": "string",
+                "default": "Unknown"
+            },
+            "race": {
+                "type": "string",
+                "default": "Unknown"
+            },
+            "veteran_status": {
+                "type": "boolean",
+                "default": false
+            },
+            "disability_status": {
+                "type": "boolean",
+                "default": false
+            },
+            "past_conditions": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "immunization": {
+                "type": "string"
+            },
+            "observation": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "allergies": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "procedure": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "location",
+        "qualifications",
+        "disqualifications"
+    ]
+}

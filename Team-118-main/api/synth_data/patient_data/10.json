@@ -1,0 +1,38 @@
+{
+    "name": "Thomas Harris",
+    "age": 28,
+    "location": {
+        "address": "852 Palm St",
+        "city": "Atlanta",
+        "state": "GA",
+        "zip": "30301"
+    },
+    "gender": "Male",
+    "race": "African American",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Chronic headaches"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 180 lbs",
+        "Headaches: Occasional, manageable with over-the-counter medication",
+        "Energy levels: Variable"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Headache management program"
+    ],
+    "medicationrequest": [
+        "Over-the-counter pain reliever as needed"
+    ],
+    "goal": "To reduce the frequency of headaches and improve overall well-being."
+}

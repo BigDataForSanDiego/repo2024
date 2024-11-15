@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediLink | Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #5b9bd5;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .notifications, .chat, .map, .info-guide {
+            width: 45%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .my-card-btn {
+            background-color: white;
+            color: #5b9bd5;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .my-card-btn:hover {
+            background-color: #e1e1e1;
+        }
+        .notifications h3, .chat h3, .map h3, .info-guide h3 {
+            color: #333;
+        }
+        .notification-item, .chat-message {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+        .chat-message {
+            display: flex;
+            justify-content: space-between;
+        }
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .send-btn {
+            padding: 10px;
+            background-color: #5b9bd5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            border-radius: 4px;
+        }
+        .send-btn:hover {
+            background-color: #4a86c5;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 6px;
+        }
+        .steps-btn {
+            background-color: #5b9bd5;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .steps-btn:hover {
+            background-color: #4a86c5;
+        }
+        .info-guide {
+            display: flex;
+            flex-direction: column;
+        }
+        .info-lookup, .chatbot {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .search-results {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: #e1e1e1;
+        }
+    </style>
+    <script>
+        const virusInfo = {
+            'XYZ Virus': 'XYZ Virus is a contagious illness. Steps to take: 1) Isolate yourself. 2) Drink plenty of fluids. 3) Contact your doctor if symptoms worsen.',
+            'Flu': 'Flu is a common viral infection. Steps to take: 1) Get plenty of rest. 2) Stay hydrated. 3) Take antiviral medications if prescribed.',
+            'COVID-19': 'COVID-19 is a highly contagious respiratory illness. Steps to take: 1) Isolate yourself. 2) Monitor symptoms closely. 3) Contact healthcare providers for treatment options.',
+            'Common Cold': 'Common cold is a viral infection of the nose and throat. Steps to take: 1) Drink warm fluids. 2) Rest and manage symptoms with over-the-counter medications.'
+        };
+
+        function showSteps(virusName) {
+            const infoBox = document.getElementById('info-box');
+            infoBox.innerHTML = virusInfo[virusName] || 'Information not found.';
+        }
+
+        function searchVirus() {
+            const searchInput = document.getElementById('search-bar').value.toLowerCase();
+            const result = Object.keys(virusInfo).find(virus => virus.toLowerCase() === searchInput);
+            showSteps(result);
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="MediLink Logo" style="height: 40px; width: auto; margin-right: 15px; margin-bottom: -10px;">
+        MediLink | Dashboard
+    </div>
+    <button class="my-card-btn">My Card</button>
+    <div class="container">
+        <!-- Notifications Section -->
+        <div class="notifications">
+            <h3>Notifications</h3>
+            <div class="notification-item">
+                Reminder: Your annual check-up is scheduled for November 20th.
+            </div>
+            <div class="notification-item">
+                Lab results for your recent blood test are available.
+            </div>
+            <div class="notification-item">
+                Flu shots are now available at your local clinic.
+            </div>
+            <div class="notification-item">
+                You have been evaluated to be at risk for XYZ virus. 
+                <button class="steps-btn" onclick="showSteps('XYZ Virus')">Steps to Take</button>
+            </div>
+        </div>
+
+        <!-- Fake Chat Section -->
+        <div class="chat">
+            <h3>Chat with Healthcare Specialist</h3>
+            <div class="chat-message">
+                <span>Dr. Smith: Please follow up with me next week.</span>
+            </div>
+            <div class="chat-message">
+                <span>You: Thank you, Doctor. I will!</span>
+            </div>
+            <input type="text" class="chat-input" placeholder="Type a message..." />
+            <button class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Map Section -->
+        <div class="map">
+            <h3>Your Location: San Diego</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107108.50823428915!2d-117.29374615!3d32.824817699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530f4a0c3763%3A0x6d45e52bca1e0fe3!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1697640123456!5m2!1sen!2sus" allowfullscreen=""></iframe>
+        </div>
+
+        <!-- Information Guide Section -->
+        <div class="info-guide">
+            <div class="info-lookup">
+                <h3>Virus Information Lookup</h3>
+                <input type="text" id="search-bar" class="search-bar" placeholder="Search for a virus..." />
+                <button class="steps-btn" onclick="searchVirus()">Search</button>
+                <div id="info-box" class="search-results">
+                    <!-- Virus information will be displayed here -->
+                </div>
+                <ul>
+                    <li onclick="showSteps('COVID-19')">COVID-19</li>
+                    <li onclick="showSteps('Flu')">Flu</li>
+                    <li onclick="showSteps('Common Cold')">Common Cold</li>
+                    <li onclick="showSteps('XYZ Virus')">XYZ Virus</li>
+                </ul>
+            </div>
+            <div class="chatbot">
+                <h3>MediLink Assistant</h3>
+                <div class="chat-message">
+                    <span>Recommendation: Don't forget to take your Vitamin D pills!</span>
+                </div>
+                <div class="chat-message">
+                    <span>Recommendation: It's almost time for your annual checkup for your leg. Call now to schedule an appointment!</span>
+                </div>
+                <div class="chat-message">
+                    <span>Recommendation: You may be at risk for knee injury due to surgery. Contact us now to take preventative measures!</span>
+                </div>
+                <div class="chat-message">
+                    <span>Chatbot: How can I assist you today?</span>
+                </div>
+                <input type="text" class="chat-input" placeholder="Ask me anything..." />
+                <button class="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

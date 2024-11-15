@@ -1,0 +1,41 @@
+# When button is hit, starttimer becomes True
+starttimer = True
+
+# These numbers can be preset buttons that make them True
+fivemin = True
+tenmin = False
+fifthteen = False
+twenty = False
+twentyfive = False
+counter = 0
+
+# sets counter to indicated time and makes sure that only one variable can be True at a time.
+if fivemin == True:
+    counter = 60*5
+    fivemin = False
+elif tenmin == True:
+    counter = 60*10
+    tenmin = False
+elif tenmin == True:
+    counter = 60*15
+    tenmin = False
+elif tenmin == True:
+    counter = 60*20
+    tenmin = False
+elif tenmin == True:
+    counter = 60*25
+    tenmin = False
+else:
+    fivemin = False
+    tenmin = False
+    fifthteen = False
+    twenty = False
+    twentyfive = False
+
+# counts down 
+while starttimer == True and counter != 0:
+    counter = counter - 1
+    print(counter)
+    if counter == 0:
+        starttimer = False
+        print("Times up!")

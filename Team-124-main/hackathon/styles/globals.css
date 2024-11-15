@@ -1,0 +1,234 @@
+/* Styles to match the updated requirement of arranging elements horizontally with larger video screens and placing buttons at the bottom of the page */
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  padding: 20px;
+  position: relative;
+}
+
+.video-panel {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.video-stream {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-right: 20px;
+}
+
+#my-video {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff;
+}
+
+#them-video {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ffffff;
+}
+
+.timer {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  position: absolute;
+  bottom: 20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+#book-button {
+  background-color: #397b8a;
+  color: white;
+}
+
+#skip-button {
+  background-color: #6c757d;
+  color: white;
+}
+.react-datepicker__portal {
+  z-index: 1100 !important;
+}
+
+.booking-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: visible;
+}
+
+.react-datepicker {
+  z-index: 1100;
+}
+
+.react-datepicker__time-container {
+  width: auto !important;
+}
+
+.react-datepicker-popper {
+  z-index: 1100 !important;
+}
+
+/* Styling dropdowns for better appearance */
+.react-datepicker__month-dropdown,
+.react-datepicker__year-dropdown {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.react-datepicker__day:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+/* Main container styling */
+.main-video-page {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;
+  font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+  background-color: #f5f5f5; /* Optional background color */
+}
+
+/* Styling for the heading */
+#waiting-room {
+  position: relative;
+  /* top: 10%; Pushes the heading down to approximately the top third */
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem; /* Adjust font size as needed */
+  color: #333; /* Optional text color */
+}
+
+/* Styling for the button */
+#connect-btn {
+  position: relative;
+  top: 40%; /* Positions the button towards the bottom third */
+  display: block;
+  margin: 0 auto; /* Centers the button horizontally */
+  padding: 10px 20px; /* Adjust padding for desired size */
+  font-size: 1rem; /* Adjust font size for readability */
+  color: #fff; /* Button text color */
+  background-color: #397b8a; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  width: 200px; /* Fixed width to prevent the button from being too large */
+  text-align: center;
+}
+
+/* Button hover effect */
+#connect-btn:hover {
+  background-color: #397b8a; /* Darker shade on hover */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 600px) {
+  #waiting-room {
+    font-size: 2rem;
+  }
+
+  #connect-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    width: 130px;
+  }
+}
+
+.booking-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  background-color: #e0e0e0;
+}
+

@@ -1,0 +1,9 @@
+﻿Name,Responsible,Status,Component,Priority,RICE Score,Reach,Impact,Confidence,Effort
+github integration/notion upkeep,Francis Fernandez,In progress,Presentation,Medium,2000,40,3,50,3
+analysis of past solutions,"Jeffrey 16, Francis Fernandez",Not started,"Presentation, Research",Low,3150,70,3,60,4
+creating the presentation,"Francis Fernandez, Eric Song, Jeffrey 16, Kevin Ruvalcaba",Not started,Presentation,High,25000,100,5,100,2
+market feasibility of our solution,"Jeffrey 16, Francis Fernandez",In progress,"Presentation, Research",Medium,3600,90,4,50,5
+scale it up perhaps to a nation level; show research on why this is an important healthcare issue to address,Jeffrey 16,Not started,Research,Low,1500,50,2,60,4
+show how our product will impact the people in imperial valley specifically,Eric Song,Done,Research,High,7600,80,5,95,5
+draw out a potential route for imperial valley specifically,"Francis Fernandez, Kevin Ruvalcaba",Done,Design,Medium,5343.75,95,3,75,4
+use figma to draw out what our application would look like,"Jeffrey 16, Kevin Ruvalcaba",In progress,Design,High,10687.5,95,5,90,4

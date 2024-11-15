@@ -1,0 +1,81 @@
+.patients-container {
+  width: 100%; /* Ensure full width */
+  padding: 20px;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+.search-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.patient-card {
+  display: flex; /* Enables flexbox layout */
+  max-width: 700px;
+  margin-left: 300px; /* Pushes the card to the right */
+  margin-right: 0; /* Optional, ensures no right margin */
+  border-radius: 8px;
+  overflow: auto;
+  background-color: #17253c; /* Dark background for the card */
+  border: 1px solid #ccc;
+}
+
+
+.patient-info {
+  width: 350px; /* Set a fixed width for patient info */
+  height: 600px; /* Set a fixed height for patient info */
+  padding: 20px;
+  text-align: left; /* Left-align text in patient info */
+}
+
+.patient-title {
+  text-align: center; /* Center-align title */
+}
+
+.picture {
+  width: 100px; /* Small size */
+  height: auto;
+}
+
+.sharp{
+  width: 200px; /* Small size */
+  height: auto;
+  margin-left:525px;
+}
+
+.dietary-restrictions {
+  width: 350px; /* Set a width for dietary restrictions */
+  margin-right: 20px; /* Space between dietary restrictions and patient info */
+  padding: 20px;
+  border-radius: 1px;
+  text-align: left; /* Left-align text in dietary restrictions */
+  background-color: #17253c; /* Light blue background */
+  border-right: 4px solid #ffffff; /* Blue left border */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .patient-card {
+      flex-direction: column; /* Stack elements vertically on small screens */
+  }
+
+  .patient-info,
+  .dietary-restrictions {
+      width: 100%; /* Full width on smaller screens */
+      margin-right: 0; /* Remove margin on smaller screens */
+  }
+
+  .picture {
+      width: 80%; /* Adjust the image width on smaller screens */
+  }
+}
+
+/* Hover effect for patient card */
+.patient-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}

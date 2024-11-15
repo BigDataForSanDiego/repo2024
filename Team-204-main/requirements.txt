@@ -1,0 +1,8 @@
+dash
+dash-extensions
+dask[dataframe]
+plotly
+gunicorn
+s3fs
+python-dotenv
+dash-bootstrap-components

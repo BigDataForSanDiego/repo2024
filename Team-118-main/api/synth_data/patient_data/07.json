@@ -1,0 +1,38 @@
+{
+    "name": "Rachel Green",
+    "age": 24,
+    "location": {
+        "address": "159 Spruce Ct",
+        "city": "Orlando",
+        "state": "FL",
+        "zip": "32801"
+    },
+    "gender": "Female",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Mild asthma"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 130 lbs",
+        "Peak flow rate: 400 L/min",
+        "Energy levels: High"
+    ],
+    "allergyintolerance": [
+        "Dust mites"
+    ],
+    "procedure": [
+        "Asthma management program"
+    ],
+    "medicationrequest": [
+        "Inhaler as needed"
+    ],
+    "goal": "To maintain control of asthma symptoms and improve exercise capacity."
+}

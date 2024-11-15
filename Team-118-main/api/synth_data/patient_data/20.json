@@ -1,0 +1,39 @@
+{
+    "name": "Sophia Turner",
+    "age": 29,
+    "location": {
+        "address": "375 Rainbow Blvd",
+        "city": "Atlanta",
+        "state": "GA",
+        "zip": "30301"
+    },
+    "gender": "Female",
+    "race": "Hispanic",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "HIV-positive"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "Hepatitis B": "2024"
+        }
+    },
+    "observation": [
+        "Viral load: Undetectable",
+        "CD4 count: 650 cells/mm³",
+        "Overall health: Good"
+    ],
+    "allergyintolerance": [
+        "Penicillin"
+    ],
+    "procedure": [
+        "Regular monitoring and check-ups"
+    ],
+    "medicationrequest": [
+        "Antiretroviral therapy",
+        "Multivitamin supplement"
+    ],
+    "goal": "To maintain an undetectable viral load and improve overall health."
+}

@@ -1,0 +1,42 @@
+/* ChatBox.css */
+.chat-box {
+    width: 400px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .chat-box-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f7f7f7;
+  }
+  
+  .chat-box-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chat-message {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  .chat-message-input {
+    background-color: #e0e0e0;
+    color: #000;
+  }
+  
+  .chat-message-output {
+    background-color: #4caf50;
+    color: #fff;
+  }

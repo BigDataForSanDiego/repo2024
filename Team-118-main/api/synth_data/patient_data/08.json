@@ -1,0 +1,38 @@
+{
+    "name": "Robert Williams",
+    "age": 39,
+    "location": {
+        "address": "753 Willow Dr",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77001"
+    },
+    "gender": "Male",
+    "race": "African American",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Gastroesophageal reflux disease (GERD)"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 200 lbs",
+        "Symptoms: Occasional heartburn",
+        "Energy levels: Moderate"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Dietary modification program"
+    ],
+    "medicationrequest": [
+        "Proton pump inhibitor"
+    ],
+    "goal": "To reduce GERD symptoms and improve dietary habits."
+}

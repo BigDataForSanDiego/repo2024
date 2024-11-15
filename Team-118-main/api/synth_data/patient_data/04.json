@@ -1,0 +1,40 @@
+{
+    "name": "David Lee",
+    "age": 54,
+    "location": {
+        "address": "321 Birch St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94102"
+    },
+    "gender": "Male",
+    "race": "Asian",
+    "veteranstatus": true,
+    "disabilitystatus": false,
+    "condition": [
+        "Hypertension",
+        "High cholesterol"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 190 lbs",
+        "Blood pressure: 145/90 mmHg",
+        "Cholesterol: 210 mg/dL"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Cardiovascular health program"
+    ],
+    "medicationrequest": [
+        "Lisinopril",
+        "Statin"
+    ],
+    "goal": "To lower blood pressure and cholesterol levels."
+}

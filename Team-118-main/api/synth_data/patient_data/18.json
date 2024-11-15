@@ -1,0 +1,40 @@
+{
+    "name": "Linda Brown",
+    "age": 38,
+    "location": {
+        "address": "654 Spruce St",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60601"
+    },
+    "gender": "Female",
+    "race": "African American",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "High blood pressure",
+        "Elevated triglycerides"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "Shingles": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 175 lbs",
+        "Blood pressure: 130/85 mmHg",
+        "Triglycerides: 200 mg/dL"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Cardiac risk assessment"
+    ],
+    "medicationrequest": [
+        "Antihypertensive medication",
+        "Fish oil supplements"
+    ],
+    "goal": "To lower blood pressure and improve cardiovascular health."
+}

@@ -1,0 +1,38 @@
+{
+    "name": "Kevin Martinez",
+    "age": 61,
+    "location": {
+        "address": "987 Elm St",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "85001"
+    },
+    "gender": "Male",
+    "race": "Hispanic",
+    "veteranstatus": true,
+    "disabilitystatus": false,
+    "condition": [
+        "Chronic obstructive pulmonary disease (COPD)"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "pneumonia": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 170 lbs",
+        "Oxygen saturation: 92%",
+        "Energy levels: Moderate"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Respiratory health program"
+    ],
+    "medicationrequest": [
+        "Bronchodilator"
+    ],
+    "goal": "To improve lung function and increase exercise tolerance."
+}

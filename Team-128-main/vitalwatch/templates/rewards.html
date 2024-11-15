@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Rewards</title>
+</head>
+<body>
+    <main>
+        <div id="menu_bar">
+            <a href="/">
+                <button type="button" class="home-button">
+                    <img src="/static/images/logo.png" alt="Home Logo" class="home-logo">
+                </button>
+            </a>
+            <a href="/resources">
+                <button type="button">Resources</button>
+            </a>
+            <a href="/rewards">
+               <button type="button">Rewards</button>
+            </a>
+            <a href="/help">
+               <button type="button" class="help">?</button>
+            </a>
+        </div>
+    </main>
+    
+    <div id="container">
+        <div class="wheel-container">
+            <canvas id="wheelCanvas" width="600" height="600"></canvas>
+            <button id="spinButton" class="search-button" >Spin the Wheel!</button>
+            <div id="result-text" class="result-text"></div>
+        </div>
+
+        <div class="info-container">
+            <h3 id="pointCounter">Your Points: <span id="points">0</span></h3>
+            <h3>Available Prizes from:</h3>
+            <ul id="prizeList">
+                <!-- Populate this list with JavaScript based on prizeList -->
+            </ul>
+            <div id="sponsorImgs">
+                <img src="{{ url_for('static', filename='images/sponsor1.png') }}" class="sImgs" alt="sponsor1" width="180px" height="180px">
+                <img src="{{ url_for('static', filename='images/sponsor2.png') }}" class="sImgs" alt="sponsor2" width="180px" height="180px">
+                <img src="{{ url_for('static', filename='images/sponsor3.png') }}" class="sImgs" alt="sponsor3" width="180px" height="180px">
+                <img src="{{ url_for('static', filename='images/sponsor4.png') }}" class="sImgs" alt="sponsor4" width="180px" height="180px">
+                <img src="{{ url_for('static', filename='images/sponsor5.png') }}" class="sImgs" alt="sponsor5" width="180px" height="180px">
+                <img src="{{ url_for('static', filename='images/sponsor6.png') }}" class="sImgs" alt="sponsor6" width="180px" height="180px">
+            </div>
+        
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close">&times;</span>
+                <p id="prizeMessage"></p>
+            </div>
+        </div>
+
+        <div id="marker">
+            <img src="/static/images/IMG_0513.PNG" alt="marker">
+        </div>
+    </div>    
+
+    <script id="prize-data" type="application/json">
+        {{ prizes | tojson | safe }}
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

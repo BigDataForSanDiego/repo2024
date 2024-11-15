@@ -1,0 +1,87 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define MAX_NAME_LENGTH 50
+#define MAX_VALUE_LENGTH 100
+#define MAX_ZIPCODES 10
+
+typedef struct {
+    char zipcode[6];  // Store the ZIP code.
+    char name[MAX_NAME_LENGTH];  // Store the name.
+    char value[MAX_VALUE_LENGTH];  // Store health index and temperature information.
+    char clean_environment[MAX_VALUE_LENGTH];  // Store "Clean Environment" data.
+    char clean_water_contamination[MAX_VALUE_LENGTH];  // Store water contamination info.
+    char air_quality[MAX_VALUE_LENGTH];  // Store air quality information.
+    time_t last_updated;  // Timestamp of the last update.
+} HealthData;
+
+HealthData health_data[MAX_ZIPCODES];
+int health_data_count = 0;  // Current count of health data entries.
+
+// Function to read health data from a CSV file.
+void read_health_data_from_csv(const char *filename) {
+    FILE *file = fopen(filename, "r");
+    if (!file) {
+        printf("Unable to open file %s\n", filename);
+        return;
+    }
+
+    char line[256];
+    while (fgets(line, sizeof(line), file) && health_data_count < MAX_ZIPCODES) {
+        char file_zipcode[6];
+        double heat_index, temperature;
+        char env[MAX_VALUE_LENGTH], water[MAX_VALUE_LENGTH], air[MAX_VALUE_LENGTH];
+
+        // Parse each line of the CSV.
+        if (sscanf(line, "%5[^,],%lf,%lf,%99[^,],%99[^,],%99[^\n]", 
+                   file_zipcode, &heat_index, &temperature, env, water, air) == 6) {
+            // Store the parsed data into the health_data array.
+            strncpy(health_data[health_data_count].zipcode, file_zipcode, 5);
+            health_data[health_data_count].zipcode[5] = '\0';
+            snprintf(health_data[health_data_count].name, MAX_NAME_LENGTH, "Health Data (%s)", file_zipcode);
+            snprintf(health_data[health_data_count].value, MAX_VALUE_LENGTH, 
+                     "Heat Index: %.1f°F, Temperature: %.1f°F", heat_index, temperature);
+            strncpy(health_data[health_data_count].clean_environment, env, MAX_VALUE_LENGTH - 1);
+            strncpy(health_data[health_data_count].clean_water_contamination, water, MAX_VALUE_LENGTH - 1);
+            strncpy(health_data[health_data_count].air_quality, air, MAX_VALUE_LENGTH - 1);
+            health_data[health_data_count].last_updated = time(NULL);  // Store the current time.
+            health_data_count++;
+        }
+    }
+
+    fclose(file);
+}
+
+// Function to display all health data entries.
+void display_health_data() {
+    printf("\n--- Health Index by ZIP Code ---\n");
+    for (int i = 0; i < health_data_count; i++) {
+        // Format the last updated time into a readable string.
+        char time_str[26];
+        ctime_r(&health_data[i].last_updated, time_str);
+        time_str[24] = '\0';  // Remove newline character.
+
+        // Print out all details of the health data entry.
+        printf("ZIP Code: %s\n", health_data[i].zipcode);
+        printf("Name: %s\n", health_data[i].name);
+        printf("Value: %s\n", health_data[i].value);
+        printf("Clean Environment: %s\n", health_data[i].clean_environment);
+        printf("Clean Water Contamination: %s\n", health_data[i].clean_water_contamination);
+        printf("Air Quality: %s\n", health_data[i].air_quality);
+        printf("Last updated: %s\n\n", time_str);
+    }
+    printf("-----------------------------\n");
+}
+
+int main() {
+    // Read health data from the CSV file.
+    const char *filename = "Zipcode data - San Diego Zipcodes.csv";
+    read_health_data_from_csv(filename);
+
+    // Display the health data.
+    display_health_data();
+
+    return 0;
+}

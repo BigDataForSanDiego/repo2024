@@ -1,0 +1,39 @@
+{
+    "name": "Michael Smith",
+    "age": 45,
+    "location": {
+        "address": "456 Oak Ave",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "73301"
+    },
+    "gender": "Male",
+    "race": "Hispanic",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Obesity",
+        "Type 2 Diabetes"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "hepatitis": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 230 lbs",
+        "Blood sugar: 150 mg/dL",
+        "Energy levels: Low"
+    ],
+    "allergyintolerance": [
+        "Peanuts"
+    ],
+    "procedure": [
+        "Lifestyle modification program"
+    ],
+    "medicationrequest": [
+        "Metformin"
+    ],
+    "goal": "To lower blood sugar levels and lose 20 pounds."
+}

@@ -1,0 +1,38 @@
+{
+    "name": "Sarah Thompson",
+    "age": 29,
+    "location": {
+        "address": "789 Pine Rd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98101"
+    },
+    "gender": "Female",
+    "race": "Asian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Mild anxiety"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 135 lbs",
+        "Blood pressure: 120/75 mmHg",
+        "Energy levels: High"
+    ],
+    "allergyintolerance": [
+        "None"
+    ],
+    "procedure": [
+        "Mental health support program"
+    ],
+    "medicationrequest": [
+        "None at this time"
+    ],
+    "goal": "To manage anxiety and improve coping strategies."
+}

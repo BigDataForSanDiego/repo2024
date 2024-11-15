@@ -1,0 +1,40 @@
+{
+    "name": "Jessica Smith",
+    "age": 34,
+    "location": {
+        "address": "456 Oak St",
+        "city": "San Diego",
+        "state": "CA",
+        "zip": "92101"
+    },
+    "gender": "Female",
+    "race": "Caucasian",
+    "veteranstatus": false,
+    "disabilitystatus": false,
+    "condition": [
+        "Obesity",
+        "High cholesterol"
+    ],
+    "immunization": {
+        "vaccines": {
+            "flu": "2023",
+            "COVID-19": "2024"
+        }
+    },
+    "observation": [
+        "Weight: 220 lbs",
+        "Blood pressure: 128/82 mmHg",
+        "Cholesterol: 210 mg/dL"
+    ],
+    "allergyintolerance": [
+        "Peanuts"
+    ],
+    "procedure": [
+        "Nutritional counseling"
+    ],
+    "medicationrequest": [
+        "Statin",
+        "Weight loss medication"
+    ],
+    "goal": "To lose weight and lower cholesterol levels."
+}
